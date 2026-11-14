@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090e18">
+    <meta name="description" content="Meet the machines that stayed behind on the Moon and Mars—and discover the stories they still have to tell.">
+    <title>Afterlight — The stories we left among the stars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="#home" aria-label="Afterlight home">
+          <span class="wordmark-mark" aria-hidden="true">✳</span>
+          <span>AFTERLIGHT</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#stories">The stories</a>
+          <a href="#timeline">Mission timeline</a>
+        </nav>
+        <a class="header-cta" href="#stories">Explore artifacts <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+          <div class="hero-stars" aria-hidden="true"></div>
+          <div class="hero-content">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> A field guide to NASA's distant footprints</p>
+            <h1 id="hero-title">Some of our<br>greatest explorers<br><span>never came home.</span></h1>
+            <p class="hero-copy">They crossed alien ground, mapped worlds we had never seen, and fell quiet when their missions ended. Explore the machines, the places they went, and the discoveries they left with us.</p>
+            <a class="button button-light" href="#stories">Meet the machines <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="planet planet-moon"><span></span></div>
+            <div class="planet planet-mars"><span></span></div>
+            <div class="hero-caption caption-moon"><span>01 / MOON</span><i></i><b>3 days from home</b></div>
+            <div class="hero-caption caption-mars"><span>02 / MARS</span><i></i><b>6 months from home</b></div>
+            <div class="space-coordinate">38° 14′ N<br>110° 47′ E</div>
+          </div>
+          <div class="hero-bottom">
+            <span>NOT LOST. JUST FAR AWAY.</span>
+            <span>SCROLL TO BEGIN <b aria-hidden="true">↓</b></span>
+          </div>
+        </section>
+
+        <section class="intro section-wrap" aria-labelledby="intro-title">
+          <div class="intro-label"><span class="section-index">01</span><span>THE IDEA</span></div>
+          <div class="intro-body">
+            <h2 id="intro-title">A mission ends.<br><span>A story doesn’t.</span></h2>
+            <p>NASA's spacecraft don't all come home. Some are parked on the Moon or Mars; others orbit a distant world or coast through space. Each one is a time capsule of the questions we wanted to answer.</p>
+            <p class="intro-small">Choose a destination. Search the archive. Open a mission file.</p>
+          </div>
+          <div class="intro-stats" aria-label="Mission facts">
+            <div><strong>12</strong><span>people walked<br>on the Moon</span></div>
+            <div><strong>5</strong><span>NASA rovers have<br>explored Mars</span></div>
+          </div>
+        </section>
+
+        <section class="stories-section" id="stories" aria-labelledby="stories-title">
+          <div class="section-wrap">
+            <div class="section-heading">
+              <div>
+                <div class="intro-label"><span class="section-index">02</span><span>THE FIELD GUIDE</span></div>
+                <h2 id="stories-title">Meet the <span>stayers.</span></h2>
+              </div>
+              <p>From the lunar surface to the edge of the solar system.<br>Pick a destination, then open a story.</p>
+            </div>
+
+            <div class="library-controls">
+              <div class="world-switch" role="group" aria-label="Filter artifacts by destination">
+                <button class="world-button is-active" type="button" data-world="moon" aria-pressed="true"><span class="world-icon moon-icon" aria-hidden="true"></span> The Moon <span class="world-count" id="moon-count"></span></button>
+                <button class="world-button" type="button" data-world="mars" aria-pressed="false"><span class="world-icon mars-icon" aria-hidden="true"></span> Mars <span class="world-count" id="mars-count"></span></button>
+                <button class="world-button" type="button" data-world="elsewhere" aria-pressed="false"><span class="world-icon elsewhere-icon" aria-hidden="true">✦</span> Elsewhere <span class="world-count" id="elsewhere-count"></span></button>
+              </div>
+              <label class="search-control">
+                <span class="visually-hidden">Search mission stories</span>
+                <span class="search-symbol" aria-hidden="true">⌕</span>
+                <input id="artifact-search" type="search" placeholder="Search a mission, world, or discovery…" autocomplete="off">
+                <kbd>/</kbd>
+              </label>
+            </div>
+
+            <div class="artifact-feature" id="artifact-feature" aria-live="polite"></div>
+            <div class="results-heading"><span id="results-count" aria-live="polite"></span><span>SELECT A FILE TO OPEN ITS STORY</span></div>
+            <div class="artifact-grid" id="artifact-grid" aria-label="Artifact stories"></div>
+            <p class="empty-state" id="empty-state" hidden>No mission files match that search. Try another name, place, or discovery.</p>
+            <p class="source-note">A mission's last signal isn't always its final resting place. Statuses here describe the mission's reported end state; spacecraft may still be in orbit or moving through space. Select a NASA source on each file for mission details.</p>
+          </div>
+        </section>
+
+        <section class="timeline-section" id="timeline" aria-labelledby="timeline-title">
+          <div class="section-wrap">
+            <div class="intro-label"><span class="section-index">03</span><span>THE LONG GOODBYE</span></div>
+            <div class="timeline-heading">
+              <h2 id="timeline-title">The mission ends.<br><span>The world keeps turning.</span></h2>
+              <p>Land, rove, listen, orbit, drift. Every mission leaves a different kind of trace.</p>
+            </div>
+            <div class="timeline-track" id="timeline-track"></div>
+            <div class="timeline-footer"><span>THE SIGNALS MAY STOP.</span><span>THE DISCOVERIES STAY.</span></div>
+          </div>
+        </section>
+
+        <section class="closing-section">
+          <div class="closing-sky" aria-hidden="true"><span></span><i></i><b></b></div>
+          <div class="closing-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> A reminder from another world</p>
+            <h2>Out there, even<br><span>silence is a story.</span></h2>
+            <p>Next time you look up, remember: the Moon and Mars aren’t empty. They’re archives—written in tracks, dust, and machines that once dreamed of discovery.</p>
+            <a class="text-link" href="#home">Back to the beginning <span aria-hidden="true">↑</span></a>
+          </div>
+          <footer class="site-footer">
+            <a class="wordmark" href="#home"><span class="wordmark-mark" aria-hidden="true">✳</span><span>AFTERLIGHT</span></a>
+            <span>MADE FOR THE CURIOUS, ON EARTH.</span>
+            <span>NASA SPACE APPS CHALLENGE</span>
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
